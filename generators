@@ -1,0 +1,17 @@
+#fib generator function to output fib number as long as user hits enter key  until quit
+def fib_gen():
+        a=0
+        b=1
+        while True:
+                yield b
+                c=a+b
+                a=b
+                b=c
+
+
+fib=fib_gen()
+
+ne=''
+while ne != 'quit':
+        ne=input('Press enter for the next number of type quit:')
+        print(next(fib))
